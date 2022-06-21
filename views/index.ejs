@@ -1,0 +1,30 @@
+<%- include('partials/header.ejs')  %> 
+
+        <h1 class="content-title">Les actualités du blog</h1>
+        <div class="pure-g">
+          <% for (const articles of list) { %>
+          <article class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-3">
+            <header>
+              <!--img  -->
+              
+              <img class="card-img pure-img" src="images/<%= articles.img %>"
+             
+               alt="<%= articles.img_alt %>">
+              <!-- title -->
+              <h2><%= articles.title %></h2>
+              <div class="card-meta">
+                <!-- author -->
+                Par <a href="#"><%= articles.author %></a> 
+                <!-- category -->
+                dans la catégorie <a href="#"><%= articles.category %></a>
+              </div>
+            </header>
+            <p>
+              <%= articles.text %>
+            </p>
+            
+            <a class="card-action pure-button" href="/article/<%= articles.id %>">Lire l'article</a>
+          </article>
+          <% } %> 
+
+<%- include('partials/footer.ejs')  %> 

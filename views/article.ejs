@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs')  %> 
+        <div class="pure-g">
+         
+          <article class="post pure-u-1">
+            <header>
+              <h1><%= articles.title %></h1>
+              <div class="post-meta">
+                Par <a href="#"><%= articles.author %></a> 
+                dans la catégorie <a href="#"><%= articles.category %></a>
+              </div>
+            </header>
+            <figure class="post-picture">
+              <img class="pure-img" src="images/<%= articles.img %>" alt="<%= articles.img_alt %>">
+              <!-- sub_title -->
+              
+              <figcaption class="post-picture-caption"><%= articles.sub_title %></figcaption>
+            </figure>
+            <div class="post-content">
+              <!-- text -->
+              <p><%= articles.text %></p>
+               
+            </div>
+            <footer>
+              <a class="pure-button" href="/">Retour à l'accueil</a>
+            </footer>
+          </article>
+         
+<%- include('partials/footer.ejs')  %> 
